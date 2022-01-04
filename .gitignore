@@ -1,2 +1,6 @@
 *.class
 *.log
+Assignment_2_Project/.bsp/
+Assignment_2_Project/.idea/
+Assignment_2_Project/project/
+Assignment_2_Project/target/

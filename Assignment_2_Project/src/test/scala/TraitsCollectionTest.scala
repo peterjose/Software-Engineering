@@ -17,7 +17,7 @@ class TraitsCollectionTest extends AnyFlatSpec {
   }
   class UniqueStack[A] extends LIFOCollection[A] with Uniqueness[A] {}
   class LoggingPriorityQueue[A : Ordering] extends PriorityCollection[A] with Logging[A] {}
-  class FullFeaturedStack[A](c: Int) extends LIFOCollection[A] with Logging[A] with Uniqueness[A] with Capacity[A] {
+  class FullFeaturedStack[A](c: Int) extends LIFOCollection[A] with Capacity[A] with Uniqueness[A] with Logging[A] {
     override val capacity: Int = c
   }
 
