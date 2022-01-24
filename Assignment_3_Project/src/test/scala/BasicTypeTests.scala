@@ -61,6 +61,16 @@ class BasicTypeTests extends AnyFlatSpec {
     assert(error.variabilityContext == VariabilityContext.emptyContext())
   }
 
+  "The arguments to 'Smaller'" must "have the type 'Num' 1" in {
+    val testExpr: Expression = 5 _lt 6
+    val t = TypeChecker.checkType(
+      testExpr,
+      VariabilityContext.emptyContext(),
+      TypeContext.emptyContext()
+    )
+    assert(t == new VType(Map(BoolTy -> Formulas.True)))
+  }
+
   "The condition in 'If'" must "have the type 'BoolTy'" in {
     val testExpr: Expression = _if(3) _then True _else False
     val error = intercept[TypeCheckingError](TypeChecker.checkType(
