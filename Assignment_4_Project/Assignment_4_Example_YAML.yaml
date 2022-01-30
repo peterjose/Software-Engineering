@@ -1,0 +1,35 @@
+1. Task:
+  42:
+  - 123
+  - 456
+  1337:
+  - 321
+  - 654
+2. Task:
+  datapoints: 16
+  error_of_split: 70272.8
+  mean: 452.0
+  name: X
+  split_by_feature: <feature name>
+  successor_left:
+    datapoints: 5
+    error_of_split: 50.75
+    mean: 262.8
+    name: XL
+    split_by_feature: <feature name>
+  successor_right:
+    datapoints: 11
+    error_of_split: 21860.53
+    mean: 538.0
+    name: XR
+    split_by_feature: <feature name>
+...
+3. Task:
+  configuration: 654
+  error_rate: 8685616.46
+  error_sample:
+  - 0
+  - 1
+  - 2
+  ...
+  feature_name: <feature name>
