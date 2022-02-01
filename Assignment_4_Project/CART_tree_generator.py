@@ -93,6 +93,10 @@ if __name__ == '__main__':
     outputFile.write("\nSplit based on ")
     outputFile.write(feature+" " +str(min_error)+ " " +str(output_matrix[feature_index]) + "\n")
     fName = fileName.split(".")
+    if fName[0][-1] == 'R':
+        outputFile.write("\nsuccessor_right:")
+    if fName[0][-1] == 'L':
+        outputFile.write("\nsuccessor_left:")
     outputFile.write("\ndatapoints: "+ str(len(input_matrix[0]))+
         "\nerror_of_split: "  + str(min_error)+
         "\nmean: "+ str(feature_mean)+
