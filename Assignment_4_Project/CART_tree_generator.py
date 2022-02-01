@@ -6,7 +6,7 @@
 
 import csv
 
-fileName = 'X.csv'
+fileName_root = 'X.csv'
 
 # @param list_A, feature list of all configuration
 # @param list_B, performance list of all configuration
@@ -38,7 +38,7 @@ def cal_fn(list_A, list_B):
     return [countL,meanL,sq_errL,countR,meanR,sq_errR,meanT,sq_errT]
 
 # Main
-if __name__ == '__main__':
+def generat_fn(fileName):
     #open and read the csv file
     csvfile = open(fileName)
     reader = csv.DictReader(csvfile)
@@ -61,11 +61,12 @@ if __name__ == '__main__':
     feature_mean,feature_index = 0,0
     feature = ''
     outputFile = open("output.txt",'a')
+    yamlOutputFile = open("yamlOutFile.txt",'a')
     outputFile.write("\n\n" + fileName)
     if len(input_matrix[0]) <= 1:
         print("\nReached End Node")
         outputFile.write("\n********No splitting Required, reached end node*****\n")
-        exit()
+        return []
 
     outputFile.write("\ncountL, meanL, sq_errL, countR, meanR, sq_errR, mean_T, sq_errT")
     for i in range(0,len(input_matrix)-1):
@@ -93,10 +94,22 @@ if __name__ == '__main__':
     outputFile.write("\nSplit based on ")
     outputFile.write(feature+" " +str(min_error)+ " " +str(output_matrix[feature_index]) + "\n")
     fName = fileName.split(".")
+    tabStr = ''
+    for i in range(len(fName[0])-2):
+        tabStr += '\t'
     if fName[0][-1] == 'R':
         outputFile.write("\nsuccessor_right:")
+        yamlOutputFile.write("\n"+tabStr+"successor_right:")
+        tabStr += '\t'
     if fName[0][-1] == 'L':
         outputFile.write("\nsuccessor_left:")
+        yamlOutputFile.write("\n"+tabStr+"successor_left:")
+        tabStr += '\t'
+    yamlOutputFile.write("\n"+tabStr+"datapoints: "+ str(len(input_matrix[0]))+
+        "\n"+tabStr+"error_of_split: "  + str(min_error)+
+        "\n"+tabStr+"mean: "+ str(feature_mean)+
+        "\n"+tabStr+"name: "+fName[0]+
+        "\n"+tabStr+"split_by_feature: "+feature)
     outputFile.write("\ndatapoints: "+ str(len(input_matrix[0]))+
         "\nerror_of_split: "  + str(min_error)+
         "\nmean: "+ str(feature_mean)+
@@ -105,8 +118,10 @@ if __name__ == '__main__':
     outputFile.close()
 
     # create output files
-    outputL = open(fName[0]+"L.csv",'w',newline ='')
-    outputR = open(fName[0]+"R.csv",'w',newline ='')
+    fNameL = fName[0]+"L.csv"
+    fNameR = fName[0]+"R.csv"
+    outputL = open(fNameL,'w',newline ='')
+    outputR = open(fNameR,'w',newline ='')
 
     # remove the feature that was used before
     newColumnName = columnName.copy()
@@ -127,3 +142,19 @@ if __name__ == '__main__':
     #Close the output files
     outputL.close()
     outputR.close()
+    csvfile.close()
+    outputFile_List = []
+    if output_matrix[feature_index][3] > 1:
+        outputFile_List.append(fNameR)
+    if output_matrix[feature_index][0] > 1:
+        outputFile_List.append(fNameL) 
+    return outputFile_List
+
+if __name__ == '__main__':
+    toexplore_list = [fileName_root]
+    while len(toexplore_list):
+        next_explore = toexplore_list[-1]
+        toexplore_list.remove(next_explore)
+        print(next_explore)
+        childFiles = generat_fn(next_explore)
+        toexplore_list += childFiles
