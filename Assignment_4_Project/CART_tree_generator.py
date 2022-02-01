@@ -62,6 +62,11 @@ if __name__ == '__main__':
     feature = ''
     outputFile = open("output.txt",'a')
     outputFile.write("\n\n" + fileName)
+    if len(input_matrix[0]) <= 1:
+        print("\nReached End Node")
+        outputFile.write("\n********No splitting Required, reached end node*****\n")
+        exit()
+
     outputFile.write("\ncountL, meanL, sq_errL, countR, meanR, sq_errR, mean_T, sq_errT")
     for i in range(0,len(input_matrix)-1):
         print(columnName[i+1])
@@ -74,11 +79,15 @@ if __name__ == '__main__':
         if min_error == -1:
             min_error = output_matrix[-1][-1]
             feature_mean = output_matrix[-1][-2]
-        if min_error > output_matrix[-1][-1]:
             feature = columnName[i+1]
-            min_error = output_matrix[-1][-1]
-            feature_mean = output_matrix[-1][-2]
-            feature_index = i
+        if min_error >= output_matrix[-1][-1]:
+            if len(input_matrix[0]) > 2 or (
+                (len(input_matrix[0]) == 2) and 
+                output_matrix[-1][0] == output_matrix[-1][3]):
+                feature = columnName[i+1]
+                min_error = output_matrix[-1][-1]
+                feature_mean = output_matrix[-1][-2]
+                feature_index = i
     # generate the output
     print("Split based on", feature, min_error, output_matrix[feature_index])
     outputFile.write("\nSplit based on ")
