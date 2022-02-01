@@ -33,8 +33,7 @@ def cal_fn(list_A, list_B):
 
     sq_errL,sq_errR = round(sq_errL , 2), round(sq_errR , 2)
     sq_errT = round(sq_errL + sq_errR,2)
-    meanT = 0 
-    meanT = round((meanL+meanR),2) if sumL == 0 or sumR == 0 else round((meanL+meanR)/2,2)
+    meanT = round(((sumL+sumR) / (countL+countR)),2)
     return [countL,meanL,sq_errL,countR,meanR,sq_errR,meanT,sq_errT]
 
 # Main
@@ -72,7 +71,7 @@ def generat_fn(fileName):
     for i in range(0,len(input_matrix)-1):
         print(columnName[i+1])
         output_matrix.append(cal_fn(input_matrix[i],input_matrix[-1]))
-        print("\t",output_matrix[-1])
+        print("  ",output_matrix[-1])
         outputFile.write("\n")
         outputFile.write(columnName[i+1])
         outputFile.write(str(output_matrix[-1]))
@@ -96,20 +95,35 @@ def generat_fn(fileName):
     fName = fileName.split(".")
     tabStr = ''
     for i in range(len(fName[0])-2):
-        tabStr += '\t'
+        tabStr += '  '
     if fName[0][-1] == 'R':
         outputFile.write("\nsuccessor_right:")
         yamlOutputFile.write("\n"+tabStr+"successor_right:")
-        tabStr += '\t'
+        tabStr += '  '
     if fName[0][-1] == 'L':
         outputFile.write("\nsuccessor_left:")
         yamlOutputFile.write("\n"+tabStr+"successor_left:")
-        tabStr += '\t'
+        tabStr += '  '
     yamlOutputFile.write("\n"+tabStr+"datapoints: "+ str(len(input_matrix[0]))+
         "\n"+tabStr+"error_of_split: "  + str(min_error)+
         "\n"+tabStr+"mean: "+ str(feature_mean)+
         "\n"+tabStr+"name: "+fName[0]+
         "\n"+tabStr+"split_by_feature: "+feature)
+    newTabStr = tabStr + '  '
+    if output_matrix[feature_index][0] == 1:
+        yamlOutputFile.write("\n"+tabStr+"successor_right:")
+        yamlOutputFile.write("\n"+newTabStr+"datapoints: 1"+ 
+            "\n"+newTabStr+"error_of_split: ''" +
+            "\n"+newTabStr+"mean: "+ str(output_matrix[feature_index][1])+
+            "\n"+newTabStr+"name: "+fName[0]+'L'+
+            "\n"+newTabStr+"split_by_feature: ''")
+    if output_matrix[feature_index][3] == 1:
+        yamlOutputFile.write("\n"+tabStr+"successor_right:")
+        yamlOutputFile.write("\n"+newTabStr+"datapoints: 1"+ 
+            "\n"+newTabStr+"error_of_split: ''"+
+            "\n"+newTabStr+"mean: "+ str(output_matrix[feature_index][4])+
+            "\n"+newTabStr+"name: "+fName[0]+'R'+
+            "\n"+newTabStr+"split_by_feature: ''")
     outputFile.write("\ndatapoints: "+ str(len(input_matrix[0]))+
         "\nerror_of_split: "  + str(min_error)+
         "\nmean: "+ str(feature_mean)+
