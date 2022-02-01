@@ -111,7 +111,7 @@ def generat_fn(fileName):
         "\n"+tabStr+"split_by_feature: "+feature)
     newTabStr = tabStr + '  '
     if output_matrix[feature_index][0] == 1:
-        yamlOutputFile.write("\n"+tabStr+"successor_right:")
+        yamlOutputFile.write("\n"+tabStr+"successor_left:")
         yamlOutputFile.write("\n"+newTabStr+"datapoints: 1"+ 
             "\n"+newTabStr+"error_of_split: ''" +
             "\n"+newTabStr+"mean: "+ str(output_matrix[feature_index][1])+

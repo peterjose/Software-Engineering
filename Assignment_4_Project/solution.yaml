@@ -33,311 +33,311 @@
   - 46
   - 47
 2. Task:
-datapoints: 26
-error_of_split: 220630.0
-mean: 1081.08
-name: X
-split_by_feature: AES
-successor_left:
-  datapoints: 13
-  error_of_split: 7491.89
-  mean: 1450.69
-  name: XL
-  split_by_feature: zip
+  datapoints: 26
+  error_of_split: 220630.0
+  mean: 1081.08
+  name: X
+  split_by_feature: AES
   successor_left:
-    datapoints: 4
-    error_of_split: 616.67
-    mean: 1317.5
-    name: XLL
-    split_by_feature: Segmentation
-    successor_right:
-      datapoints: 1
-      error_of_split: ''
-      mean: 1270.0
-      name: XLLR
-      split_by_feature: ''
+    datapoints: 13
+    error_of_split: 7491.89
+    mean: 1450.69
+    name: XL
+    split_by_feature: zip
     successor_left:
-      datapoints: 3
-      error_of_split: 112.5
-      mean: 1333.33
-      name: XLLL
-      split_by_feature: Timestamp
+      datapoints: 4
+      error_of_split: 616.67
+      mean: 1317.5
+      name: XLL
+      split_by_feature: Segmentation
       successor_right:
         datapoints: 1
         error_of_split: ''
-        mean: 1315.0
-        name: XLLLR
+        mean: 1270.0
+        name: XLLR
         split_by_feature: ''
       successor_left:
-        datapoints: 2
-        error_of_split: 0.0
-        mean: 1342.5
-        name: XLLLL
-        split_by_feature: einGB
-        successor_right:
-          datapoints: 1
-          error_of_split: ''
-          mean: 1335.0
-          name: XLLLLL
-          split_by_feature: ''
-        successor_right:
-          datapoints: 1
-          error_of_split: ''
-          mean: 1350.0
-          name: XLLLLR
-          split_by_feature: ''
-  successor_right:
-    datapoints: 9
-    error_of_split: 1440.17
-    mean: 1509.89
-    name: XLR
-    split_by_feature: Segmentation
-    successor_left:
-      datapoints: 6
-      error_of_split: 173.5
-      mean: 1521.5
-      name: XLRL
-      split_by_feature: Signature
-      successor_left:
-        datapoints: 4
-        error_of_split: 0.0
-        mean: 1531.5
-        name: XLRLL
-        split_by_feature: einGB
-        successor_left:
-          datapoints: 2
-          error_of_split: 0.0
-          mean: 1525.0
-          name: XLRLLL
-          split_by_feature: Timestamp
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 1525.0
-            name: XLRLLLL
-            split_by_feature: ''
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 1525.0
-            name: XLRLLLR
-            split_by_feature: ''
-        successor_right:
-          datapoints: 2
-          error_of_split: 0.0
-          mean: 1538.0
-          name: XLRLLR
-          split_by_feature: Timestamp
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 1538.0
-            name: XLRLLRL
-            split_by_feature: ''
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 1538.0
-            name: XLRLLRR
-            split_by_feature: ''
-      successor_right:
-        datapoints: 2
-        error_of_split: 0.0
-        mean: 1501.5
-        name: XLRLR
-        split_by_feature: einGB
-        successor_right:
-          datapoints: 1
-          error_of_split: ''
-          mean: 1500.0
-          name: XLRLRL
-          split_by_feature: ''
-        successor_right:
-          datapoints: 1
-          error_of_split: ''
-          mean: 1503.0
-          name: XLRLRR
-          split_by_feature: ''
-    successor_right:
-      datapoints: 3
-      error_of_split: 0.0
-      mean: 1486.67
-      name: XLRR
-      split_by_feature: Signature
-      successor_right:
-        datapoints: 1
-        error_of_split: ''
-        mean: 1480.0
-        name: XLRRR
-        split_by_feature: ''
-      successor_left:
-        datapoints: 2
-        error_of_split: 0.0
-        mean: 1490.0
-        name: XLRRL
+        datapoints: 3
+        error_of_split: 112.5
+        mean: 1333.33
+        name: XLLL
         split_by_feature: Timestamp
         successor_right:
           datapoints: 1
           error_of_split: ''
-          mean: 1490.0
-          name: XLRRLL
+          mean: 1315.0
+          name: XLLLR
           split_by_feature: ''
+        successor_left:
+          datapoints: 2
+          error_of_split: 0.0
+          mean: 1342.5
+          name: XLLLL
+          split_by_feature: einGB
+          successor_left:
+            datapoints: 1
+            error_of_split: ''
+            mean: 1335.0
+            name: XLLLLL
+            split_by_feature: ''
+          successor_right:
+            datapoints: 1
+            error_of_split: ''
+            mean: 1350.0
+            name: XLLLLR
+            split_by_feature: ''
+    successor_right:
+      datapoints: 9
+      error_of_split: 1440.17
+      mean: 1509.89
+      name: XLR
+      split_by_feature: Segmentation
+      successor_left:
+        datapoints: 6
+        error_of_split: 173.5
+        mean: 1521.5
+        name: XLRL
+        split_by_feature: Signature
+        successor_left:
+          datapoints: 4
+          error_of_split: 0.0
+          mean: 1531.5
+          name: XLRLL
+          split_by_feature: einGB
+          successor_left:
+            datapoints: 2
+            error_of_split: 0.0
+            mean: 1525.0
+            name: XLRLLL
+            split_by_feature: Timestamp
+            successor_left:
+              datapoints: 1
+              error_of_split: ''
+              mean: 1525.0
+              name: XLRLLLL
+              split_by_feature: ''
+            successor_right:
+              datapoints: 1
+              error_of_split: ''
+              mean: 1525.0
+              name: XLRLLLR
+              split_by_feature: ''
+          successor_right:
+            datapoints: 2
+            error_of_split: 0.0
+            mean: 1538.0
+            name: XLRLLR
+            split_by_feature: Timestamp
+            successor_left:
+              datapoints: 1
+              error_of_split: ''
+              mean: 1538.0
+              name: XLRLLRL
+              split_by_feature: ''
+            successor_right:
+              datapoints: 1
+              error_of_split: ''
+              mean: 1538.0
+              name: XLRLLRR
+              split_by_feature: ''
+        successor_right:
+          datapoints: 2
+          error_of_split: 0.0
+          mean: 1501.5
+          name: XLRLR
+          split_by_feature: einGB
+          successor_left:
+            datapoints: 1
+            error_of_split: ''
+            mean: 1500.0
+            name: XLRLRL
+            split_by_feature: ''
+          successor_right:
+            datapoints: 1
+            error_of_split: ''
+            mean: 1503.0
+            name: XLRLRR
+            split_by_feature: ''
+      successor_right:
+        datapoints: 3
+        error_of_split: 0.0
+        mean: 1486.67
+        name: XLRR
+        split_by_feature: Signature
         successor_right:
           datapoints: 1
           error_of_split: ''
-          mean: 1490.0
-          name: XLRRLR
+          mean: 1480.0
+          name: XLRRR
           split_by_feature: ''
-successor_right:
-  datapoints: 13
-  error_of_split: 3046.89
-  mean: 711.46
-  name: XR
-  split_by_feature: zip
-  successor_left:
-    datapoints: 4
-    error_of_split: 0.0
-    mean: 575.0
-    name: XRL
-    split_by_feature: Signature
-    successor_left:
-      datapoints: 2
-      error_of_split: 0.0
-      mean: 580.0
-      name: XRLL
-      split_by_feature: Timestamp
-      successor_right:
-        datapoints: 1
-        error_of_split: ''
-        mean: 580.0
-        name: XRLLL
-        split_by_feature: ''
-      successor_right:
-        datapoints: 1
-        error_of_split: ''
-        mean: 580.0
-        name: XRLLR
-        split_by_feature: ''
-    successor_right:
-      datapoints: 2
-      error_of_split: 0.0
-      mean: 570.0
-      name: XRLR
-      split_by_feature: Timestamp
-      successor_right:
-        datapoints: 1
-        error_of_split: ''
-        mean: 570.0
-        name: XRLRL
-        split_by_feature: ''
-      successor_right:
-        datapoints: 1
-        error_of_split: ''
-        mean: 570.0
-        name: XRLRR
-        split_by_feature: ''
+        successor_left:
+          datapoints: 2
+          error_of_split: 0.0
+          mean: 1490.0
+          name: XLRRL
+          split_by_feature: Timestamp
+          successor_left:
+            datapoints: 1
+            error_of_split: ''
+            mean: 1490.0
+            name: XLRRLL
+            split_by_feature: ''
+          successor_right:
+            datapoints: 1
+            error_of_split: ''
+            mean: 1490.0
+            name: XLRRLR
+            split_by_feature: ''
   successor_right:
-    datapoints: 9
-    error_of_split: 1360.17
-    mean: 772.11
-    name: XRR
-    split_by_feature: Segmentation
+    datapoints: 13
+    error_of_split: 3046.89
+    mean: 711.46
+    name: XR
+    split_by_feature: zip
     successor_left:
-      datapoints: 6
-      error_of_split: 93.5
-      mean: 781.5
-      name: XRRL
+      datapoints: 4
+      error_of_split: 0.0
+      mean: 575.0
+      name: XRL
       split_by_feature: Signature
       successor_left:
         datapoints: 2
         error_of_split: 0.0
-        mean: 801.5
-        name: XRRLL
-        split_by_feature: einGB
-        successor_right:
-          datapoints: 1
-          error_of_split: ''
-          mean: 795.0
-          name: XRRLLL
-          split_by_feature: ''
-        successor_right:
-          datapoints: 1
-          error_of_split: ''
-          mean: 808.0
-          name: XRRLLR
-          split_by_feature: ''
-      successor_right:
-        datapoints: 4
-        error_of_split: 0.0
-        mean: 771.5
-        name: XRRLR
-        split_by_feature: einGB
+        mean: 580.0
+        name: XRLL
+        split_by_feature: Timestamp
         successor_left:
-          datapoints: 2
-          error_of_split: 0.0
-          mean: 770.0
-          name: XRRLRL
-          split_by_feature: Timestamp
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 770.0
-            name: XRRLRLL
-            split_by_feature: ''
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 770.0
-            name: XRRLRLR
-            split_by_feature: ''
+          datapoints: 1
+          error_of_split: ''
+          mean: 580.0
+          name: XRLLL
+          split_by_feature: ''
         successor_right:
-          datapoints: 2
-          error_of_split: 0.0
-          mean: 773.0
-          name: XRRLRR
-          split_by_feature: Timestamp
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 773.0
-            name: XRRLRRL
-            split_by_feature: ''
-          successor_right:
-            datapoints: 1
-            error_of_split: ''
-            mean: 773.0
-            name: XRRLRRR
-            split_by_feature: ''
-    successor_right:
-      datapoints: 3
-      error_of_split: 0.0
-      mean: 753.33
-      name: XRRR
-      split_by_feature: Signature
-      successor_right:
-        datapoints: 1
-        error_of_split: ''
-        mean: 760.0
-        name: XRRRL
-        split_by_feature: ''
+          datapoints: 1
+          error_of_split: ''
+          mean: 580.0
+          name: XRLLR
+          split_by_feature: ''
       successor_right:
         datapoints: 2
         error_of_split: 0.0
-        mean: 750.0
-        name: XRRRR
+        mean: 570.0
+        name: XRLR
         split_by_feature: Timestamp
-        successor_right:
+        successor_left:
           datapoints: 1
           error_of_split: ''
-          mean: 750.0
-          name: XRRRRL
+          mean: 570.0
+          name: XRLRL
           split_by_feature: ''
         successor_right:
           datapoints: 1
           error_of_split: ''
-          mean: 750.0
-          name: XRRRRR
+          mean: 570.0
+          name: XRLRR
           split_by_feature: ''
+    successor_right:
+      datapoints: 9
+      error_of_split: 1360.17
+      mean: 772.11
+      name: XRR
+      split_by_feature: Segmentation
+      successor_left:
+        datapoints: 6
+        error_of_split: 93.5
+        mean: 781.5
+        name: XRRL
+        split_by_feature: Signature
+        successor_left:
+          datapoints: 2
+          error_of_split: 0.0
+          mean: 801.5
+          name: XRRLL
+          split_by_feature: einGB
+          successor_left:
+            datapoints: 1
+            error_of_split: ''
+            mean: 795.0
+            name: XRRLLL
+            split_by_feature: ''
+          successor_right:
+            datapoints: 1
+            error_of_split: ''
+            mean: 808.0
+            name: XRRLLR
+            split_by_feature: ''
+        successor_right:
+          datapoints: 4
+          error_of_split: 0.0
+          mean: 771.5
+          name: XRRLR
+          split_by_feature: einGB
+          successor_left:
+            datapoints: 2
+            error_of_split: 0.0
+            mean: 770.0
+            name: XRRLRL
+            split_by_feature: Timestamp
+            successor_left:
+              datapoints: 1
+              error_of_split: ''
+              mean: 770.0
+              name: XRRLRLL
+              split_by_feature: ''
+            successor_right:
+              datapoints: 1
+              error_of_split: ''
+              mean: 770.0
+              name: XRRLRLR
+              split_by_feature: ''
+          successor_right:
+            datapoints: 2
+            error_of_split: 0.0
+            mean: 773.0
+            name: XRRLRR
+            split_by_feature: Timestamp
+            successor_left:
+              datapoints: 1
+              error_of_split: ''
+              mean: 773.0
+              name: XRRLRRL
+              split_by_feature: ''
+            successor_right:
+              datapoints: 1
+              error_of_split: ''
+              mean: 773.0
+              name: XRRLRRR
+              split_by_feature: ''
+      successor_right:
+        datapoints: 3
+        error_of_split: 0.0
+        mean: 753.33
+        name: XRRR
+        split_by_feature: Signature
+        successor_left:
+          datapoints: 1
+          error_of_split: ''
+          mean: 760.0
+          name: XRRRL
+          split_by_feature: ''
+        successor_right:
+          datapoints: 2
+          error_of_split: 0.0
+          mean: 750.0
+          name: XRRRR
+          split_by_feature: Timestamp
+          successor_left:
+            datapoints: 1
+            error_of_split: ''
+            mean: 750.0
+            name: XRRRRL
+            split_by_feature: ''
+          successor_right:
+            datapoints: 1
+            error_of_split: ''
+            mean: 750.0
+            name: XRRRRR
+            split_by_feature: ''
 3. Task:
   configuration: 654
   error_rate: 8685616.46
